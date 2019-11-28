@@ -1,9 +1,6 @@
 <?php
     $connection = mysqli_connect('localhost', 'root', '', 'loginapp');
-    if($connection){
-        echo "Successfully connected";
-    }
-    else{
+     if(!$connection){
         echo "connnection Failed";
     }
     
@@ -27,6 +24,7 @@
 <body>
     <div class="container">
         <div class="col-sm-6">
+             <h1 class="text-center">Read</h1>
             <?php
                 while($row = mysqli_fetch_assoc($result)){
                     ?>
